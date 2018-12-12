@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody
+  CardBody
 } from 'reactstrap';
 
 const WMPROJ = process.env.REACT_APP_WMPROJ;

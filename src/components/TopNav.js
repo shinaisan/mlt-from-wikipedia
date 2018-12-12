@@ -1,15 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
 import {
-  Button,
   Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink
+  NavbarBrand
 } from 'reactstrap';
 import logo from '../logo.svg';
 

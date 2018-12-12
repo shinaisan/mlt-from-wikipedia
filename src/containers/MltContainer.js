@@ -57,9 +57,10 @@ class MltContainer extends React.Component {
 
   getThumbnails(mlt) {
     const thumbnails = mlt.thumbnails;
-    return Object.values(thumbnails).reduce((dict, page) => (
-      dict[page.title] = (page.thumbnail && page.thumbnail.source), dict
-    ), {});
+    return Object.values(thumbnails).reduce((dict, page) => {
+      dict[page.title] = (page.thumbnail && page.thumbnail.source);
+      return dict;
+    }, {});
   }
 
   render() {

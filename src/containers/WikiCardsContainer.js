@@ -1,6 +1,5 @@
 import React from 'react';
 import WikiCards from '../components/WikiCards';
-import api from '../api';
 
 class WikiCardsContainer extends React.Component {
 

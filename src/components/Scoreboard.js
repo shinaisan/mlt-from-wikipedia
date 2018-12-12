@@ -3,7 +3,6 @@ import {
   ListGroup,
   ListGroupItem
 } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
 
 const rainbow = (index, size = 7) => {
   index = (index % size);
@@ -52,7 +51,7 @@ const Explanation = ({explanation, level}) => (
 class Scoreboard extends React.Component {
 
   renderItem(doc, index) {
-    const { title, opening_text, language, category} = doc._source;
+    const { title } = doc._source;
     return (
       <ListGroupItem key={ index } >
         <h3>{ title }</h3>
@@ -65,7 +64,6 @@ class Scoreboard extends React.Component {
   }
 
   render() {
-    const thumbnails = this.props.thumbnails;
     const documents = this.props.documents;
     return (
       <ListGroup>

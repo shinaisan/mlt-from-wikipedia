@@ -8,7 +8,6 @@ import {
 import reducer from './reducers';
 import TopNav from './components/TopNav';
 import MltContainer from './containers/MltContainer';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
