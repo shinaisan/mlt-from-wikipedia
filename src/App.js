@@ -1,28 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+import reducer from './reducers';
+import TopNav from './components/TopNav';
+import MltContainer from './containers/MltContainer';
 import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
-class App extends Component {
+const store = createStore(reducer);
+
+class App extends React.Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store} >
+        <Router>
+          <div>
+            <TopNav />
+            <Route exact path='/' component={ MltContainer } />
+            <Route path='/mlt' component={ MltContainer } />
+            <Route path='/test' component={ MltContainer } />
+          </div>
+        </Router>
+      </Provider>
     );
   }
+
 }
 
 export default App;
+
